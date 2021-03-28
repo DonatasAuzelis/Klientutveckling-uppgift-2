@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/bootstrap.css" />
+    <title>Cart</title>
+  </head>
+
+  <body onload="renderOrder()">
+    <nav class="navbar navbar-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="index.html">Fake Store</a>
+      <a class="navbar-brand" href="cart.html">Cart</a>
+    </nav>
+
+    <div class="container">
+      <h1>Your cart</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Product</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody id="products"></tbody>
+      </table>
+    </div>
+
+    <div class="container">
+      <form action="confirmation.html" name="form" onsubmit="return(checkOutCart());">
+        <label for="name">Name:</label><br />
+        <input type="text" id="form-name" name="name" /> <br />
+
+        <label for="phoneNumber">Phone number:</label><br />
+        <input type="text" id="form-number" name="number" /> <br />
+
+        <label for="email">Email:</label><br />
+        <input type="text" id="form-email" name="email" /> <br />
+
+        <label for="adress">Address:</label><br />
+        <input type="text" id="form-street" name="street" placeholder="Street"/><br />
+
+        <input type="text" id="form-zip" name="zip" placeholder="Zip" /><br />
+
+        <input type="text" id="form-city" name="city" placeholder="City" /><br /><br />
+
+        <input type="submit" class="btn btn-primary" />
+      </form>
+    </div>
+
+    <script src="scripts/jQuery.js"></script>
+    <script src="scripts/cart.js"></script>
+    <script src="scripts/form-validation.js"></script>
+  </body>
+</html>
